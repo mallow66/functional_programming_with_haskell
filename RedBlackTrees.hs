@@ -1,9 +1,6 @@
 data Color = RED | BLACK deriving (Show)
 data  RBT a = E | N a Color (RBT a) (RBT a) deriving (Show)
 
-isRed:: (RBT a) -> Color
-isRed E = BLACK
-isRed (N el color left right) = color
 
 rotateLeft::(RBT a)->(RBT a)
 rotateLeft E = E
