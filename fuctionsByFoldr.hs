@@ -42,7 +42,7 @@
  --filter a list based on a predicate p
 
  filter' :: (a -> Bool ) -> [a] -> [a]
- filter' p (x:xs) | p x = x: filter' p xs
+ filter' p (x:xss) | p x = x: filter' p xs
                   | otherwise =  filter' p xs
 
 
@@ -57,7 +57,7 @@
       -- foldl f e [] = e
       -- foldl f e (x:xs) = foldl f (f e x) xs
 
-      -- for example we can use it in the reverse function that reverse the element of a list
+      -- for example we can use it in the reverse function that reverse the elements of a list
 
 
 
