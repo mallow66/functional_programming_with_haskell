@@ -57,7 +57,7 @@
       -- foldl f e [] = e
       -- foldl f e (x:xs) = foldl f (f e x) xs
 
-      -- for example we can use it in the reverse function that reverse the elements of a list
+      -- for example we can use it in the reverse function that reverse the elements of a list.
 
 
 
