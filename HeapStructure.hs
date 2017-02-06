@@ -18,8 +18,8 @@ merge t1@(H r  x a1 a2) t2@(H r' x'  b1 b2) | x <= x' = join x  a1 (merge a2 t2)
                                           | otherwise = join x' b1 ( merge t1  b2 )
 
 join :: (Ord a) => a -> (LH a) -> (LH a) -> (LH a)
-join x a b | distance a >= distance b = (H ((distance b)+1) x b a )
-           | otherwise  = (H ((distance a)+1) x a b )
+join x a b | distance a >= distance b = (H ((distance b)+1) x a b )
+           | otherwise  = (H ((distance a)+1) x b a )
 
 
 add :: (Ord a) => a -> (LH a) -> (LH a)
